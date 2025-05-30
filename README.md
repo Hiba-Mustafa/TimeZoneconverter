@@ -9,7 +9,7 @@ This project lets you input a country name and a UTC time, and it will:
 
 ## Features
 - Supports over 80 countries with their timezone offsets (e.g., "italy", "canada", "japan").
-- Auto-corrects country names using the [Levenshtein distance algorithm]:(https://www.babelstreet.com/blog/drawbacks-of-levenshtein-distance-algorithms-for-name-matching) (e.g., "itly" → "italy").
+- Auto-corrects country names using the [Levenshtein distance algorithm](https://www.babelstreet.com/blog/drawbacks-of-levenshtein-distance-algorithms-for-name-matching) (e.g., "itly" → "italy").
 - Rejects invalid or fictional country names like "Kingdom of Wakanda" with a clear error message.
 - Handles 12-hour time format with AM/PM.
 - Throws errors for invalid inputs (e.g., negative hours or unknown countries).
