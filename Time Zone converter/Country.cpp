@@ -10,6 +10,11 @@
 
 Country::Country() : found(false) {}
 
+Country::Country(string paese, Time UTC)
+{
+    Country::setTimeLine( paese, UTC);
+}
+
 void Country::setTimeLine(string paese, Time UTC)
 {
     for (int i = 0; i < paese.size(); i++)
@@ -41,7 +46,9 @@ void Country::setTimeLine(string paese, Time UTC)
         }
     }
 
-    if (min_distance < best_match.size()/3 || min_distance >= 2)
+    int max_allowedDistance = min(3, max(2, static_cast<int>(paese.size() / 3)));
+
+    if (min_distance <= max_allowedDistance)
     {
         auto it = country.find(best_match);
         found = true;
