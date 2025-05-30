@@ -74,6 +74,8 @@ public:
 
 	Country();
 
+	Country(string paese, Time UTC);
+
 	void setTimeLine(string paese, Time UTC);
 
     string getCountry();
